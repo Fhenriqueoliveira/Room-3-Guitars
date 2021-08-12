@@ -4,8 +4,6 @@
     background-color: rgba(0, 0, 0, 0.829);
 }
 
-
-
 * {
     padding: 0px;
     margin: 0px;
@@ -103,14 +101,7 @@ section#equipe p{
 footer {
     text-align: center;
     padding: .3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-    height: 40px;
     color: #fff;
     font-size: 19px;
-}
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
+    background-color: rgba(0, 0, 0, 0.5);
+  }

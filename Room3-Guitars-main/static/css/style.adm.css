@@ -1,10 +1,5 @@
-@font-face {
-    font-family: Pokemon;
-    src: url('./font/Pokemon\ Solid.ttf');
- }
-
 body ,html {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,0,0,1) 50%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgb(126, 12, 12) 50%);
     background-repeat: no-repeat;
 
     height: 100%;
@@ -13,11 +8,9 @@ body ,html {
 }
 
 h1 {
-    font-family: Pokemon, Arial;
-    color: #ffcc01;
-    -webkit-text-stroke-width: 2px; /* largura da borda */
-    -webkit-text-stroke-color: #3264b0; /* cor da borda */
-    font-size: 4rem;
+  padding-right: 5rem;
+  color: white;
+  font-size: 4rem;
 }
 
 
@@ -47,7 +40,7 @@ section.modal{
   section.modal div#card h2{
     padding: 2rem;
     margin: 0;
-    color: #ff0101;
+    color: rgb(126, 12, 12);
   }
   
   section.modal div#card a#fechar{
@@ -55,12 +48,12 @@ section.modal{
     right: 0;
     top: 0;
     font-size: 2rem;
-    color: #ff0101;
+    color: rgb(126, 12, 12);
     padding: 1.5rem;
   }
   
   section.modal div#card a#fechar:hover{
-    color: #fd9b9b;
+    color: #b90303;
   }
   
   section.modal div#card hr{
@@ -74,20 +67,17 @@ section.modal{
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  button#voltar a{
+    color:rgb(209, 54, 54);
+    text-decoration: none;
+  }
 
   footer {
     text-align: center;
     padding: .3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-    height: 40px;
     color: #fff;
     font-size: 19px;
-}
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   
   /* Fim dos estilos do modal */

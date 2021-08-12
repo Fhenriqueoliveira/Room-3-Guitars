@@ -20,33 +20,53 @@ div#menu {
     align-items: center;
 }
 
-nav{
-    background-color: rgba(0, 0, 0, 0.336);
-    position: fixed;
+nav {
+    background-color:rgba(0, 0, 0, 0.671);
+    position:fixed;
     width: 100%;
 }
 
-nav img#logotipo {
-    width: 15%;
-    padding: .5rem 0rem .5rem 2rem;
-}
-
-nav ul{
-    list-style: none;
+#navbar {
     display: flex;
-    padding-left: 40rem;
+    width: 100%;
+    align-items: center;
 }
 
-nav ul li{
-    padding: .8rem;
+nav #logotipo{
+    padding: 1.5vh 5vw;
+    height:60px;
+    height: clamp(2.5em, .8em + 5vw, 3.3vw)
 }
 
-nav ul li a{
+#navlinks {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 80%;    
+    padding-right: 4vw;
+    
+}
+
+nav ul li {
+    padding-right: 1.5vw;
+    
+}
+
+nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1.7rem;
-    font-weight: 600;
-} 
+    font-size: larger;
+    color: whitesmoke
+}
+
+nav ul a:hover{
+	color:rgb(255, 255, 255);
+    background-color: rgb(163, 20, 20);
+    padding: .2rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    border-radius: 15px;
+	}
 
 header{
     padding: 18vw;
@@ -56,39 +76,24 @@ header{
 }
 
 header h1{
+    width: 100%;
     font-size: 2.4vw;
     font-weight: 500;
     text-transform: uppercase;
-    background-color:rgba(0, 0, 0, 0.400);
+    background-color:rgba(0, 0, 0, 0.600);
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 1rem .8rem 1rem .8rem;
-}
-
-header div#sobre{
-    display: flex;
-}
-
-header div#sobre p#text1{
-    width: 50%;
-    font-size: 1.6vw;
-    font-weight: 500;
-    line-height: 2.5vw;
-    background-color:rgba(0, 0, 0, 0.400);
-    justify-content: center;
-    color: rgb(255, 255, 255);
     padding: 1vw;
-    text-align: center;
 }
 
-header div#sobre p#text2{
-    width: 50%;
+header div#sobre p{
+    width: 100%;
     font-size: 1.6vw;
     font-weight: 500;
     line-height: 2.5vw;
-    background-color:rgba(0, 0, 0, 0.400);
+    background-color:rgba(0, 0, 0, 0.600);
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 1vw;
     text-align: center;
 }
@@ -96,14 +101,7 @@ header div#sobre p#text2{
 footer {
     text-align: center;
     padding: .3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-    height: 40px;
     color: #fff;
     font-size: 19px;
-}
-footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-}
+    background-color: rgba(0, 0, 0, 0.5);
+  }

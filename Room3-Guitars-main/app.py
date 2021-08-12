@@ -30,34 +30,43 @@ def index():
     return render_template('index.html')
 
 
-#rota catalogo
+#rota para página catálogo
 @app.route ('/catalogo')
 def catalogo():
     guitar = Guitar.query.all()
     return render_template ('catalogo.html', guitar = guitar )
 
+#rota para página equipe
+@app.route ('/equipe')
+def equipe():
+    return render_template ('equipe.html')
+
+#rota para página sobre
+@app.route ('/sobre')
+def sobre():
+    return render_template ('sobre.html')
+
+#rota para página adm
 @app.route ('/adm')
 def adm():
     guitars = Guitar.query.all()
     return render_template ('adm.html', guitars = guitars )
 
 #Rota Login 
-
 @app.route('/login')
 def login():
     session['usuario_logado'] = None
     return render_template('login.html')
 
 #Rota de autenticação
-
 @app.route('/auth',methods=['GET','POST'])
 def auth ():
     if request.form['senha'] == '1234':
        session ['usuario_logado'] = '1234'
-       flash('Login feito com sucesso!')
+    #    flash('Login feito com sucesso!')
        return redirect('/adm')
     else:
-        flash('erro no login, tente novamente!')
+        # flash('erro no login, tente novamente!')
         return redirect ('/login')
 
 # Rota para logout
@@ -66,7 +75,7 @@ def logout ():
     session ['usuario_logado'] = None
     return redirect ('/login')
 
-
+#rota para add itens no catalogo
 @app.route('/add', methods=['GET','POST'])
 def add():
     if request.method =='POST':
@@ -77,8 +86,9 @@ def add():
             )
         db.session.add(guitar)
         db.session.commit()
-        return redirect('/catalogo')
+        return redirect('/adm')
 
+#rota para editar itens
 @app.route('/edit/<id>',methods=['GET','POST'])
 def edit (id):
     guitar = Guitar.query.get(id)
@@ -91,12 +101,14 @@ def edit (id):
         return redirect ('/adm')
     return render_template('adm.html',guitar=guitar, guitars=guitars)
 
+#rotas para pegar o id
 @app.route('/<id>')
 def get_by_id(id):
     guitar = Guitar.query.get(id)
     all = Guitar.query.all()
     return render_template('adm.html', guitarDelete = guitar, guitars =all)
 
+#rota para deletar
 @app.route('/delete/<id>')
 def delete(id):
     guitar=Guitar.query.get(id)

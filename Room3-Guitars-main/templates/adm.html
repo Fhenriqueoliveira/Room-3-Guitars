@@ -9,8 +9,9 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/style.adm.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.png">
     
-    <title>Administração do Catalogo</title>
+    <title>Administração do Catálogo</title>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <img src="" alt="" width="80">
             </div>
             <div class="col-md-10">
-                <h1>Catalogo</h1>
+                <h1>Catálogo</h1>
             </div>
         </div>
 
@@ -31,7 +32,7 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active fs-4 fw-bold text-decoration-none text-danger" id="pokedex-tab"
                             data-bs-toggle="tab" data-bs-target="#pokedex" type="button" role="tab"
-                            aria-controls="pokedex" aria-selected="true">Catalogo</button>
+                            aria-controls="pokedex" aria-selected="true">Preview</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link fs-4 fw-bold text-decoration-none text-danger" id="cadastro-tab"
@@ -42,6 +43,9 @@
                         <button class="nav-link fs-4 fw-bold text-decoration-none text-danger" id="adm-tab"
                             data-bs-toggle="tab" data-bs-target="#adm" type="button" role="tab" aria-controls="adm"
                             aria-selected="false">Adm</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fs-4 fw-bold text-decoration-none text-danger" id="voltar"><a href="/catalogo">Catálogo</a></button>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -136,10 +140,6 @@
                     <label for="imagem" class="form-label">Imagem</label>
                     <input type="text" class="form-control" id="imagem" placeholder="Imagem"
                         name="imagem" value='{{guitar.imagem}}'>
-                </div>
-                <div class="mb-3">
-                    <label for="tipo" class="form-label">Tipo</label>
-                    <input type="text" class="form-control" id="tipo" placeholder="Tipo do pokemon" name="tipo" value='{{guitar.tipo}}'>
                 </div>
                 <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição</label>
